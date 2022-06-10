@@ -15,6 +15,14 @@ window.addEventListener("click", function (event) {
   //Проверяем является ли элемент кнопкой плюс
   if (event.target.dataset.action === "plus") {
     counter.innerText = ++counter.innerText;
+    //Функция пересчета стоимости
+    if (
+      event.target.hasAttribute("data-action") &&
+      event.target.closest(".cart-wrapper")
+    ) {
+      //Функция пересчета стоимости
+      calcCartPrice();
+    }
   }
   //Проверяем является ли элемент кнопкой плюс
   if (event.target.dataset.action === "minus") {
@@ -27,11 +35,15 @@ window.addEventListener("click", function (event) {
       parseInt(counter.innerText) === 1
     ) {
       //Удаляем товар из корзины
-      event.target.closest('.cart-item').remove();
+      event.target.closest(".cart-item").remove();
+      //Отображение статуса корзины пуста/полная
+      toggleCartStatus();
+      //Функция пересчета стоимости
+      calcCartPrice();
     }
-    toggleCartStatus();
     //Клик на + и - для пересчета общей стоисоти
     if (event.target.hasAttribute('data-action') && event.target.closest('.cart-wrapper')) {
+      //Функция пересчета стоимости
       calcCartPrice();
     }
   }

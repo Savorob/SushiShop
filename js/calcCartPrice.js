@@ -2,7 +2,7 @@ function calcCartPrice () {
     const cartItems = document.querySelectorAll('.cart-item');
 
     let totalPrice = 0;
-    let priceOnPage = document.querySelector('.total-price');
+    let totalPriceOnPage = document.querySelector('.total-price');
 
     cartItems.forEach(function (item) {
        
@@ -13,5 +13,6 @@ function calcCartPrice () {
 
         totalPrice += curentPrice; 
     })
-    priceOnPage.innerText = totalPrice;
+    //Отображаем цену на странице
+    totalPriceOnPage.innerText = totalPrice;
 }
