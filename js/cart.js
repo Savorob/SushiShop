@@ -64,8 +64,7 @@ window.addEventListener("click", function (event) {
     card.querySelector('[data-counter]').innerText = '1';
 	//Отображение статуса корзины Пустая или нет
 	toggleCartStatus();
-	orderFormShow();
-
-
+	//Пересчет общей стоимости
+	calcCartPrice();
   }
 });

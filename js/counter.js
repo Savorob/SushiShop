@@ -29,8 +29,10 @@ window.addEventListener("click", function (event) {
       //Удаляем товар из корзины
       event.target.closest('.cart-item').remove();
     }
-
     toggleCartStatus();
-    orderFormShow();
+    //Клик на + и - для пересчета общей стоисоти
+    if (event.target.hasAttribute('data-action') && event.target.closest('.cart-wrapper')) {
+      calcCartPrice();
+    }
   }
 });
