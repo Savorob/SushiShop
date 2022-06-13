@@ -171,6 +171,9 @@ h3, h4 {
 .free {
 	color: #0EA107;
 }
+.canvas {
+	color: red;
+}
 
 .total-price {
 	color: #EB5A1E;

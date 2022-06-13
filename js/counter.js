@@ -21,7 +21,7 @@ window.addEventListener("click", function (event) {
       event.target.closest(".cart-wrapper")
     ) {
       //Функция пересчета стоимости
-      calcCartPrice();
+      calcCartPriceAndDelivery();
     }
   }
   //Проверяем является ли элемент кнопкой плюс
@@ -44,7 +44,7 @@ window.addEventListener("click", function (event) {
     //Клик на + и - для пересчета общей стоисоти
     if (event.target.hasAttribute('data-action') && event.target.closest('.cart-wrapper')) {
       //Функция пересчета стоимости
-      calcCartPrice();
+      calcCartPriceAndDelivery();
     }
   }
 });
