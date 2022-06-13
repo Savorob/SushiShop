@@ -21,7 +21,7 @@ function calcCartPriceAndDelivery () {
         deliveryStatus.innerText = 'бесплатно';
         deliveryStatus.classList.replace("canvas", "free");
     } else {
-        deliveryStatus.innerText = "платно";
+        deliveryStatus.innerText = "250 рублей";
         deliveryStatus.classList.replace('free', 'canvas');
     }
 }

@@ -39,7 +39,7 @@ window.addEventListener("click", function (event) {
       //Отображение статуса корзины пуста/полная
       toggleCartStatus();
       //Функция пересчета стоимости
-      calcCartPrice();
+      calcCartPriceAndDelivery();
     }
     //Клик на + и - для пересчета общей стоисоти
     if (event.target.hasAttribute('data-action') && event.target.closest('.cart-wrapper')) {
